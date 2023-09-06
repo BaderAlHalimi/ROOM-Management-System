@@ -1,0 +1,207 @@
+body {
+    background-color: #fff;
+}
+table {
+    width: 100%;
+    border: 2px solid var(--gray-color-50);
+    border-spacing: 0;
+    border-radius: 7px;
+}
+table thead {
+    display: block;
+    background: var(--gray-color-50);
+    padding: 18px;
+    color: var(--gray-color-500);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 2px solid var(--gray-color-50);
+}
+table tbody {
+    display: block;
+    
+}
+table tbody tr,
+table thead tr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table tbody tr {
+    padding: 25px 18px;
+    border-bottom: 2px solid var(--gray-color-50);
+}
+table tbody tr:last-of-type {
+    border-bottom: transparent;
+}
+table th {
+    font-weight: 400;
+}
+table tbody td {
+    color: var(--gray-color-600);
+}
+table tbody td.id{
+color: var(--gray-color-900);
+font-weight: 500;
+}
+
+thead tr th,
+tbody tr td{
+    width: calc((100% - 25px) / 7);
+    text-align: left;
+}
+thead tr th.colspan-2,
+tbody tr td.colspan-2{
+    width: calc(((100% - 25px) / 7) * 2);
+}
+thead tr th:last-of-type,
+tbody tr td:last-of-type {
+    width: 25px;
+}
+.container-filter-options {
+    background-color: var(--gray-color-50);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    margin-bottom: 25px;
+}
+.container-filter-options .filter-options {
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    margin: 0;
+}
+.container-filter-options .filter-options .status {
+    margin-top: 8px;
+}
+
+.container-filter-options .filter-options .date {
+    margin-top: 35px;
+    /* margin-left: -40px; */
+}
+.container-filter-options .filter-options .date div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--gray-color-800);
+    font-size: 15px;
+    font-weight: 500;
+}
+.container-filter-options .filter-options .date div input {
+    border: 1px solid #B9BDC7;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    border-radius: 5px;
+    width: 195px;
+    color: var(--gray-color-600);
+    font-size: 15px;
+}
+.container-filter-options .filter-options .people {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    gap: 40px;
+    font-size: 14px;
+    width: fit-content;
+}
+.container-filter-options .filter-options .people .adult,
+.container-filter-options .filter-options .people .children {
+    display: flex;
+    align-items: center;
+}
+.container-filter-options .filter-options .people span.title {
+    color: var(--gray-color-800);
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.container-filter-options .filter-options .people span.title + p {
+    color: var(--gray-color-600);
+    margin-right: 25px;
+}
+.container-filter-options .filter-options .people .adult .number ,
+.container-filter-options .filter-options .people .children .number{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.container-filter-options .filter-options .people .adult .number .num ,
+.container-filter-options .filter-options .people .children .number .num {
+    font-weight: 500;
+    font-size: 22px;
+}
+.container-filter-options .filter-options .people .adult .number .sup,
+.container-filter-options .filter-options .people .adult .number .add,
+.container-filter-options .filter-options .people .children .number .sup,
+.container-filter-options .filter-options .people .children .number .add {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8f1fd;
+    color: #1570EF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.container-filter-options a.button {
+    width: 166px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+@media screen and (max-width:1100px) {
+    .container-content {
+        margin: 0px 25px 30px;
+    }
+}
+@media screen and (max-width:850px) {
+    table {
+        font-size: 14px;
+    }
+    .filter-options .status + div .search input {
+        width: 250px;
+    }
+}
+@media screen and (max-width:650px) {
+    .filter-options .status + div .search input {
+        width: 170px;
+        font-size: 14px;
+    }
+    .filter-options .status + div .filter {
+        font-size: 14px;
+    }
+    .filter-options .status + div .filter {
+        font-size: 14px;
+    }
+    .container-content {
+        margin: 0px 15px 30px;
+    }
+}
+table {
+    min-width: 450px;
+}
+@media screen and (max-width:550px) {
+    table {
+        font-size: 10px;
+    }
+    .filter-options {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    table tbody tr {
+        padding: 12px 8px;
+    }
+    table thead {
+        padding: 12px 8px;
+    }
+    thead tr th:last-of-type, tbody tr td:last-of-type {
+        text-align: right;
+    }
+    .container-content {
+        margin: 0px 8px 18px;
+    }
+}
