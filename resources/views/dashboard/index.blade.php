@@ -246,10 +246,10 @@
         <div class="occupancy-statistics">
             <div class="title">
                 Occupancy Statistics
-                <span class="icon">
-                    <canvas id="myChart"></canvas>
-                </span>
             </div>
+            <span class="canvas" style="display: block">
+                <canvas id="myChart"></canvas>
+            </span>
         </div>
         <div class="customers-feedback">
             <div class="title">

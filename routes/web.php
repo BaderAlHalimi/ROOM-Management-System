@@ -19,4 +19,5 @@ Route::get('/', function () {
 Route::view('/hotel', 'dashboard.index');
 Route::view('/guest', 'dashboard.guest');
 Route::view('/deal', 'dashboard.deal');
+Route::view('/calender', 'dashboard.calender');
 Route::view('/front-desk', 'dashboard.front-desk');

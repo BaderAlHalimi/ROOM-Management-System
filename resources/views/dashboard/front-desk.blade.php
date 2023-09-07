@@ -77,6 +77,7 @@
             </div>
             <a href="#" class="button">Check availability</a>
     </div>
+    <div class="table">
     <table>
         <thead>
             <tr>
@@ -148,6 +149,8 @@
             </tr>
         </tbody>
     </table>
+</div>
+    
 </x-layout>
 
 <section class="add" id="add" hidden>

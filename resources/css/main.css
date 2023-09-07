@@ -513,7 +513,8 @@ section.add .add-deal .row .form-control label {
     color: var(--gray-color-800);
     margin-bottom: 12px;
 }
-section.add .add-deal .row .form-control input {
+section.add .add-deal .row .form-control input,
+select.search{
     width: 320px;
     height: 40px;
     border-radius: 3px;
@@ -524,6 +525,10 @@ section.add .add-deal .row .form-control input {
     outline: none;
     transition: 0.2s;
     background-color: transparent;
+}
+select.search{
+    /* height: 60px; */
+    padding: 6px;
 }
 section.add .add-deal .row .form-control input:focus ,
 section.add .add-deal .row .form-control textarea:focus,

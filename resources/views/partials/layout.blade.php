@@ -23,7 +23,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    @vite(['resources/css/main.css', 'resources/js/main.js']) {{ $vite ?? '' }}
+    @vite(['resources/css/main.css', 'resources/js/main.js'])
+    {{ $vite ?? '' }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,33 +58,47 @@
         <div class="container-content">
             {{ $slot }}
         </div>
+        {{ $section ?? '' }}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"
         integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-            const ctx = document.getElementById('myChart');
-          
-            new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'Yellow', 'Green', 'Purple',
+                    'Orange'
+                ],
                 datasets: [{
-                  label: '# of Votes',
-                  data: [12, 19, 3, 5, 2, 3],
-                  borderWidth: 1
+                    backgroundColor: '#6FA3EA',
+                    label: '# of Votes',
+                    // borderRadius: {
+                    // },
+                    // topLeft: '15px',
+                    borderRadius: 3,
+                    width: 12,
+                    data: [12, 19, 3, 5, 2, 3, 25, 2, 4, 8],
+                    borderWidth: 1,
+                    barPercentage: 0.6,
+                    // categoryPercentage: 0.8
                 }]
-              },
-              options: {
+            },
+            options: {
                 scales: {
-                  y: {
-                    beginAtZero: true
-                  }
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
                 }
-              }
-            });
-          </script>
+            }
+        });
+    </script>
+    {{ $script ?? '' }}
 </body>
 
 </html>
