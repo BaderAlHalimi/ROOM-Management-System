@@ -18,7 +18,7 @@ table thead {
 }
 table tbody {
     display: block;
-    
+
 }
 table tbody tr,
 table thead tr{
@@ -247,7 +247,7 @@ table {
     }
     .container-filter-options .filter-options .date div {
         width: 100%;
-        
+
     }
     .container-filter-options .filter-options .date div input {
         width: 100%;
@@ -282,7 +282,7 @@ table {
     /* border-color: ; */
 }
 .mbsc-timeline-header-column, .mbsc-timeline-header-date, .mbsc-timeline-header-month, .mbsc-timeline-header-week, .mbsc-timeline-resource, .mbsc-timeline-resource-header-cont, .mbsc-timeline-row, .mbsc-timeline-row-date, .mbsc-timeline-row-group:after, .mbsc-timeline-sidebar-header-cont, .mbsc-timeline-sidebar-resource {
-    border-width: 0px;
+    /* border-width: 0px; */
 }
 .mbsc-timeline-resource-col, .mbsc-timeline-sidebar-col {
     width: 120px;

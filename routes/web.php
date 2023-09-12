@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::view('/test','dashboard.calender');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,3 +31,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+

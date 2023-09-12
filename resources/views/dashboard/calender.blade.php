@@ -29,8 +29,8 @@
     <x-slot:script>
         <script>
             const data = [{
-                start: '2023-09-02T00:00',
-                end: '2023-09-05T00:00',
+                start: '2023-09-22T00:00',
+                end: '2023-09-22T02:00',
                 title: 'Event 1',
                 resource: 5
             }, {
@@ -150,8 +150,8 @@
                         timeline: {
                             type: ele.dataset.filter,
                         },
-                        startTime: '09:00',
-                        endTime: '18:00',
+                        startTime: '08:00',
+                        endTime: '17:00',
                         timeCellStep: 60,
                         timeLabelStep: 60,
                     };
@@ -159,12 +159,12 @@
                         view: view,
                         data: data,
                         resources: resources,
-                        clickToCreate: true,
-                        dragToCreate: true,
-                        dragToMove: true,
-                        dragToResize: true,
+                        clickToCreate: false,
+                        dragToCreate: false,
+                        dragToMove: false,
+                        dragToResize: false,
                         dragTimeStep: 15,
-                        eventDelete: true
+                        eventDelete: false
                     });
                     console.log(ele.dataset.filter, view);
                 }
@@ -176,7 +176,7 @@
                 theme: 'ios',
                 themeVariant: 'light'
             });
-            // day , week , 
+            // day , week ,
             mobiscroll.eventcalendar('#demo-month-view', {
                 view: {
                     timeline: {
@@ -185,17 +185,17 @@
                 },
                 data: data,
                 resources: resources,
-                clickToCreate: true,
-                dragToCreate: true,
-                dragToMove: true,
-                dragToResize: true,
+                clickToCreate: false,
+                dragToCreate: false,
+                dragToMove: false,
+                dragToResize: false,
                 dragTimeStep: 15,
-                eventDelete: true
+                eventDelete: false
             });
         </script>
     </x-slot:script>
 </x-layout>
-{{-- 
+{{--
      // startDay: 1,
                         // endDay: 5,
                         // startTime: '09:00',
