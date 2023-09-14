@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/test','dashboard.calender');
+Route::view('/ttt','dashboard.index');
+Route::view('/calender','dashboard.calender');
 
 Route::get('/', function () {
     return view('welcome');
