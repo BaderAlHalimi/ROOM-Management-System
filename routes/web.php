@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::view('/ttt','dashboard.index');
-Route::view('/calender','dashboard.calender');
-
+Route::prefix('admin')->group(function (){
+    Route::view('/', 'dashboard.index');
+    Route::view('/calender', 'dashboard.calender');
+});
 Route::get('/', function () {
     return view('welcome');
 });
@@ -31,6 +31,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
-
-
+require __DIR__ . '/auth.php';

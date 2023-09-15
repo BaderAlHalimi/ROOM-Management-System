@@ -20,4 +20,9 @@ class Training extends Model
         'days',
     ];
 
+    public function monitor()
+    {
+        return $this->belongsTo(Userr::class,'monitor','id');
+    }
+
 }

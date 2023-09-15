@@ -14,4 +14,12 @@ class Desk extends Model
         'room_id',
     ];
 
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
+    public function reserves()
+    {
+        return $this->morphMany(Reservation::class,'reserveable');
+    }
 }

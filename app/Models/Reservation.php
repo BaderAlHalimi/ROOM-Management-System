@@ -14,7 +14,19 @@ class Reservation extends Model
         'date',
         'start_at',
         'end_at',
-        'reserveable', //////////Important to revision
+        'reserveable_type',
+        //////////Important to revision
+        'reserveable_id',
+        //////////Important to revision
         'user_id',
     ];
+    protected $with = ['user'];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function reserveable()
+    {
+        return $this->morphTo();
+    }
 }
